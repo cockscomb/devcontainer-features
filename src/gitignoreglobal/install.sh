@@ -1,13 +1,10 @@
 #!/bin/sh
 set -e
 
-GITIGNORE_PATH="$(git config --global --get core.excludesfile || true)"
+GITIGNORE_PATH="$(git config --system --get core.excludesfile || true)"
 if [ -z "${GITIGNORE_PATH}" ]; then
-  if [ -n "${XDG_CONFIG_HOME}" ]; then
-    GITIGNORE_PATH="${XDG_CONFIG_HOME}/git/ignore"
-  else
-    GITIGNORE_PATH="${HOME}/.config/git/ignore"
-  fi
+  GITIGNORE_PATH=/etc/gitignore
+  git config --system --add core.excludesfile $GITIGNORE_PATH
 fi
 echo "Using global gitignore file: ${GITIGNORE_PATH}"
 
