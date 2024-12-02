@@ -1,9 +1,9 @@
 {
-    "hello": {
+    "macos": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "hello": {
-                "greeting": "hello"
+            "gitignoreglobal": {
+                "gitignore": "Global/macOS"
             }
         }
     }
