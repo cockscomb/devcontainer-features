@@ -1,0 +1,10 @@
+{
+    "macos": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "gitignoreglobal": {
+                "gitignore": "Global/macOS"
+            }
+        }
+    }
+}
