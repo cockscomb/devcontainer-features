@@ -9,4 +9,4 @@ fi
 echo "Using global gitignore file: ${GITIGNORE_PATH}"
 
 mkdir -p "$(dirname "${GITIGNORE_PATH}")"
-curl -sS "https://raw.githubusercontent.com/github/gitignore/main/${GITIGNORE}.gitignore" > "${GITIGNORE_PATH}"
+curl -sS "https://raw.githubusercontent.com/github/gitignore/main/${GITIGNORE}.gitignore" >> "${GITIGNORE_PATH}"
