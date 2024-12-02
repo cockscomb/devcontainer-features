@@ -1,0 +1,21 @@
+{
+    "name": "gitignore global",
+    "id": "gitignoreglobal",
+    "version": "1.0.0",
+    "description": "Global gitignore generator",
+    "options": {
+        "gitignore": {
+            "type": "string",
+            "proposals": [
+                "Global/Linux",
+                "Global/Windows",
+                "Global/macOS"
+            ],
+            "default": "Global/macOS",
+            "description": "Select a file from https://github.com/github/gitignore"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
